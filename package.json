@@ -1,0 +1,59 @@
+{
+  "name": "queuely-redis-transport",
+  "version": "0.1.0",
+  "description": "Redis Transport for queuely queue package.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "NODE_ENV=testing ava --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CImrie/queuely-redis-transport.git"
+  },
+  "keywords": [
+    "queuely",
+    "redis",
+    "queue",
+    "transport",
+    "queue"
+  ],
+  "dependencies": {
+    "ioredis": "^2.5.0",
+    "queuely": "^0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "node-uuid": "^1.4.8"
+  },
+  "author": "Connor Imrie <connor@randomstate.co.uk> (http://connorimrie.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CImrie/queuely-redis-transport/issues"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*.test.js"
+    ],
+    "source": [
+      "**/*.{js,jsx}",
+      "!dist/**/*"
+    ],
+    "match": [
+      "*"
+    ],
+    "concurrency": 4,
+    "failFast": true,
+    "tap": false,
+    "powerAssert": false,
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ],
+    "babel": "inherit"
+  },
+  "homepage": "https://github.com/CImrie/queuely-redis-transport#readme"
+}
